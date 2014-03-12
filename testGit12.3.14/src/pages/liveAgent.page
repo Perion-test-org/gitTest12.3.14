@@ -1,0 +1,38 @@
+<apex:page >    
+  <h1>Welcome</h1>
+   Thank you for contacting customer support
+
+   <!-- START Button code -->      
+      <img id="liveagent_button_online_573D000000000Ar" style="display: none; 
+      border: 0px none; cursor: pointer" onclick="liveagent.startChat('573i0000000PCfr')" 
+      src="https://na1.salesforce.com/resource/1319587702000/Chat_Online" />      
+
+      <img id="liveagent_button_offline_573i0000000PCfr" style="display: none; 
+      border: 0px none; " 
+      src="https://na1.salesforce.com/resource/1319587748000/Chat_Offline" />      
+
+      <a id="liveagent_button_online_573i0000000PCfr" href="javascript://Chat" style="display: none;" onclick="liveagent.startChat('573i0000000PCfr')"><!-- Online Chat Content --></a><div id="liveagent_button_offline_573i0000000PCfr" style="display: none;"><!-- Offline Chat Content --></div>
+      <script type="text/javascript">
+    if (!window._laq) { window._laq = []; }
+    window._laq.push(function(){liveagent.showWhenOnline('573i0000000PCfr', document.getElementById('liveagent_button_online_573D000000000Ar'));
+    liveagent.showWhenOffline('573i0000000PCfr', document.getElementById('liveagent_button_offline_573i0000000PCfr'));
+    });</script>
+   <!-- END Button code -->
+
+   <!-- Deployment code --> 
+<script type='text/javascript'
+   src='https://c.la1s1.saleforceliveagent.com/content/g/deployment.js'></script>
+
+<script type='text/javascript'>
+   // An auto query that searches contacts whose email field matches "john@acme.com"     
+   liveagent.addCustomDetail('Contact E-mail', 'john@acme.com').map('Contact', 'Email', false, true);
+   // A fast-fill to populate a contact’s name with "John Doe"
+   liveagent.addCustomDetail('Contact Name', 'John Doe').map('Contact', 'Name', true, false); 
+   // Saves the custom detail to a custom field on LiveChatTranscript at the end of a chat     
+   liveagent.addCustomDetail('Company', 'Acme').saveToTranscript('Company__c');     
+   // Overrides the display name of the visitor in the agent console when engaged in a chat     
+   liveagent.setName('John Doe');      
+
+   liveagent.init('https://d.la1s1.salesforceliveagent.com/chat', '572D0000000002R', '00DD0000000JXbY'); 
+</script>  
+</apex:page>

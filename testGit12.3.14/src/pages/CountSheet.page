@@ -1,0 +1,37 @@
+<apex:page standardStylesheets="false" showHeader="false" sidebar="false" standardController="Merchandise__c" recordSetVar="products">
+<apex:stylesheet value="{!URLFOR($Resource.Styles, 'styles.css')}"/>
+<script type='text/javascript' src='https://c.la1c1.salesforceliveagent.com/content/g/deployment.js'></script>
+<script type='text/javascript'>
+liveagent.init('https://d.la1c1.salesforceliveagent.com/chat', '572i0000000PCfr', '00Di0000000H9F9');
+</script>
+  <a id="liveagent_button_online_573i0000000PCfr" href="javascript://Chat" style="display: none;" onclick="liveagent.startChat('573i0000000PCfr')"><!-- Online Chat Content --></a><div id="liveagent_button_offline_573i0000000PCfr" style="display: none;"><!-- Offline Chat Content --></div><script type="text/javascript">
+if (!window._laq) { window._laq = []; }
+window._laq.push(function(){liveagent.showWhenOnline('573i0000000PCfr', document.getElementById('liveagent_button_online_573i0000000PCfr'));
+liveagent.showWhenOffline('573i0000000PCfr', document.getElementById('liveagent_button_offline_573i0000000PCfr'));
+});</script>
+
+  <h1>Inventory Count Sheet</h1>
+  
+  <apex:form >
+  
+      <apex:dataTable value="{!products}" var="pitem" rowClasses="odd,even">
+      
+          <apex:column headerValue="Product">
+          <apex:outputText value="{!pitem.name}"/>
+          </apex:column>
+          <apex:column headerValue="Inventory">
+          <apex:outputField value="{!pitem.Total_Inventory__c}"/>
+          </apex:column>
+          <apex:column headerValue="Physical Count">
+          <apex:inputField value="{!pitem.Total_Inventory__c}"/>
+          </apex:column>
+      
+      </apex:dataTable>
+      
+      <br/>
+      <apex:commandButton action="{!quicksave}" value="Update Counts" />
+      
+  
+  </apex:form>
+
+</apex:page>
