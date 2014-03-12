@@ -5,6 +5,8 @@ public with sharing class ForgotPasswordController {
     public String username {get; set;}   
     
     //Gad 12.3.14 - test git 1st comment
+    
+    //Gad 12.3.14 - test git 1st comment on branch called "New branch".
        
     public ForgotPasswordController() {}
 	
