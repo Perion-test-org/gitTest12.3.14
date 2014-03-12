@@ -3,6 +3,8 @@
  */
 public with sharing class ForgotPasswordController {
     public String username {get; set;}   
+    
+    //Gad 12.3.14 - test git 1st comment
        
     public ForgotPasswordController() {}
 	
